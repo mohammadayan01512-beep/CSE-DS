@@ -1,0 +1,82 @@
+<!-- Aim: Build a dynamic calculator using JavaScript. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+
+    <style>
+        .calculator {
+            width: 300px;
+            padding: 20px;
+            margin: auto;
+            background: lightblue;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+
+    <h2>Calculator</h2>
+
+    <input type="number" id="n1" placeholder="First Number">
+
+    <input type="number" id="n2" placeholder="Second Number">
+
+    <br>
+
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+
+    <h3 id="result">Result: </h3>
+
+</div>
+
+<script>
+    function calculate(operator) {
+
+        let a = Number(document.getElementById("n1").value);
+        let b = Number(document.getElementById("n2").value);
+
+        let result;
+
+        if (operator == '+')
+            result = a + b;
+
+        else if (operator == '-')
+            result = a - b;
+
+        else if (operator == '*')
+            result = a * b;
+
+        else if (operator == '/') {
+            if (b == 0) {
+                document.getElementById("result").innerHTML =
+                "Cannot divide by zero";
+                return;
+            }
+            result = a / b;
+        }
+
+        document.getElementById("result").innerHTML =
+        "Result: " + result;
+    }
+</script>
+
+</body>
+</html>
