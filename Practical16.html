@@ -1,0 +1,68 @@
+<!-- Aim: Implement basic and advanced form validation using JavaScript. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="text" id="email">
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    Mobile:
+    <input type="text" id="mobile">
+    <br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+<script>
+    function validateForm() {
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let mobile = document.getElementById("mobile").value;
+
+        if (name == "") {
+            alert("Please enter your name");
+            return false;
+        }
+
+        if (!email.includes("@") || !email.includes(".")) {
+            alert("Enter a valid email");
+            return false;
+        }
+
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters");
+            return false;
+        }
+
+        if (!/^[0-9]{10}$/.test(mobile)) {
+            alert("Enter a valid 10-digit mobile number");
+            return false;
+        }
+
+        alert("Registration Successful!");
+        return false;
+    }
+</script>
+
+</body>
+</html>
