@@ -1,0 +1,35 @@
+<!-- Aim: Apply advanced CSS features like rounded corners and border images -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced CSS</title>
+
+    <style>
+        .box {
+            width: 250px;
+            padding: 30px;
+            margin: 30px;
+            background-color: lightblue;
+            border: 5px solid blue;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .image-border {
+            width: 200px;
+            padding: 15px;
+            border: 15px solid transparent;
+            border-image: url("border.png") 30 stretch;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Rounded Corners</h2>
+    <div class="box">Rounded Corner Box</div>
+
+    <h2>Border Image</h2>
+    <img src="photo.jpg" class="image-border">
+
+</body>
+</html>
