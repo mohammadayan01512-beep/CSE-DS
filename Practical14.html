@@ -1,0 +1,40 @@
+<!-- Aim: Create an interactive webpage using alert, prompt and confirm. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Dialog Boxes</title>
+</head>
+<body>
+
+<h2>JavaScript Dialog Boxes</h2>
+
+<button onclick="showAlert()">Alert</button>
+<button onclick="showPrompt()">Prompt</button>
+<button onclick="showConfirm()">Confirm</button>
+
+<script>
+    function showAlert() {
+        alert("Welcome to JavaScript!");
+    }
+
+    function showPrompt() {
+        let name = prompt("Enter your name:");
+        if (name != null) {
+            alert("Hello " + name);
+        }
+    }
+
+    function showConfirm() {
+        let result = confirm("Are you sure?");
+        
+        if (result) {
+            alert("You clicked OK");
+        } else {
+            alert("You clicked Cancel");
+        }
+    }
+</script>
+
+</body>
+</html>
