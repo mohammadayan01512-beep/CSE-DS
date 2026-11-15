@@ -1,0 +1,41 @@
+<!-- Aim: Handle events like onclick, onsubmit and onmouseover.-->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events</title>
+</head>
+<body>
+
+<h2>JavaScript Events</h2>
+
+<button onclick="showMessage()">
+    Click Me
+</button>
+
+<p onmouseover="this.style.color='red'"
+   onmouseout="this.style.color='black'">
+    Move mouse over this text.
+</p>
+
+<form onsubmit="return submitForm()">
+    Enter Name:
+    <input type="text" id="name" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function showMessage() {
+        alert("Button Clicked!");
+    }
+
+    function submitForm() {
+        alert("Form Submitted Successfully!");
+        return false;
+    }
+</script>
+
+</body>
+</html>
+ 
